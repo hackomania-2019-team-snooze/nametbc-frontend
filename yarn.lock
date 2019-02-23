@@ -942,7 +942,7 @@ async-limiter@~1.0.0:
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
   integrity sha512-jp/uFnooOiO+L211eZOoSyzpOITMXx1rBITauYykG3BRYPu8h0UcxsPNB04RR5vo4Tyz3+ay17tR6JVf9qzYWg==
 
-async@^2.4.0, async@^2.5.0, async@^2.6.1:
+async@^2.0.0, async@^2.4.0, async@^2.5.0, async@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.2.tgz#18330ea7e6e313887f5d2f2a904bac6fe4dd5381"
   integrity sha512-H1qVYh1MYhEEFLsP97cVKqCGo7KfCyTt6uEWqsTBr9SO84oK9Uwbyd/yCW+6rKJLHksBNUVWZDAjfS+Ccx0Bbg==
@@ -1800,6 +1800,11 @@ event-target-shim@^1.0.5:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-1.1.1.tgz#a86e5ee6bdaa16054475da797ccddf0c55698491"
   integrity sha1-qG5e5r2qFgVEddp5fM3fDFVphJE=
+
+eventemitter3@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
+  integrity sha1-HIaZHYFq0eUEdQ5zh0Ik7PO+xQg=
 
 eventemitter3@^3.0.0:
   version "3.1.0"
@@ -3455,7 +3460,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -4642,6 +4647,15 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-audio-toolkit@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-audio-toolkit/-/react-native-audio-toolkit-1.0.6.tgz#4eff06667c0d00ddad23f88facfcecf26cdd083b"
+  integrity sha1-Tv8GZnwNAN2tI/iPrPzs8mzdCDs=
+  dependencies:
+    async "^2.0.0"
+    eventemitter3 "^1.2.0"
+    lodash "^4.13.1"
+
 react-native-easy-toast@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-native-easy-toast/-/react-native-easy-toast-1.2.0.tgz#0f70bcb99e3306cda4800c244bfb4a67d42276ed"
@@ -4676,6 +4690,11 @@ react-native-orientation@^3.1.3:
   resolved "https://registry.yarnpkg.com/react-native-orientation/-/react-native-orientation-3.1.3.tgz#d45803841fe94b6cce9acbe904fd5ca191a3711e"
   integrity sha512-A0h0E+2f95X4avmhaBG1ZT8WDxBACA/q//JN2eF1E7kq8AJVxt5XDiavv+aSBkBlqFsfF3bIS+T/DB5mXmnxuA==
 
+react-native-permissions@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-1.1.1.tgz#4876004681ff8556454613d85249b01baff9b35b"
+  integrity sha512-t0Ujm177bagjUOSzhpmkSz+LqFW04HnY9TeZFavDCmV521fQvFz82aD+POXqWsAdsJVOK3umJYBNNqCjC3g0hQ==
+
 react-native-ratings@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/react-native-ratings/-/react-native-ratings-6.3.0.tgz#becda9379616776a81d9d90bfc95ea40b76286fb"
@@ -4695,6 +4714,11 @@ react-native-safe-area-view@^0.12.0:
   version "1.0.0-alpha.22"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.22.tgz#7a120377b52aa9bbb94d0b8541a014026be9289b"
   integrity sha512-kSyAt0AeVU6N7ZonfV6dP6iZF8B7Bce+tk3eujXhzBGsLg0VSLnU7uE9VqJF0xdQrHR91ZjGgVMieo/8df9KTA==
+
+react-native-sound@^0.10.12:
+  version "0.10.12"
+  resolved "https://registry.yarnpkg.com/react-native-sound/-/react-native-sound-0.10.12.tgz#f912d6f9d6e9e2b42b391e0226787628d940f01a"
+  integrity sha512-lhvzZ+ekNSHW9s4FjmxxGAQmd7yDT9FnHgJNP824cMyHRrTES/LgHnSOxES/1FWVoaQ8FdfbEHkWd2rN0G/L9A==
 
 react-native-status-bar-height@^2.2.0:
   version "2.2.0"
