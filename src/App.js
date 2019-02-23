@@ -30,12 +30,27 @@ const AppNavigator = createStackNavigator({
       DailyVids: DailyVids,
       RecordVoice: RecordVoice,
       TextEditor: TextEditor
-    }),
+    },{
+      headerMode: 'none',
+      navigationOptions: {
+          headerVisible: false,
+      }
+  }),
     Gallery: createStackNavigator({
       VideoList: VideoList,
       Video: Video
-    })
+    },{
+      headerMode: 'none',
+      navigationOptions: {
+          headerVisible: false,
+      }
   })
+  })
+},{
+    headerMode: 'none',
+    navigationOptions: {
+        headerVisible: false,
+    }
 });
 
 export default createAppContainer(AppNavigator);
