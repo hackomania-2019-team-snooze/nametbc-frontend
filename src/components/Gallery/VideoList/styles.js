@@ -1,17 +1,25 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
+    Main:{
+        backgroundColor: 'black',
+        flex: 1
+    },
     List:{
         flexDirection: "column",
-        flex: 2
     },
     ListItem: {
-        flex: 1,
-        backgroundColor: 'blue',
+        flex: 3,
+        backgroundColor: 'grey',
         borderStyle: 'solid',
         alignSelf: 'center',
         width: 300,
-        padding: 50
+        padding: 20,
+        margin: 10
+    },
+    Text:{
+        fontSize: 20,
+        fontWeight: "700"
     }
 })
 

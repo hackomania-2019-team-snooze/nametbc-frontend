@@ -3,6 +3,8 @@ import {
   Text, 
   View,
   Button,
+  ScrollView,
+  TouchableOpacity
 } from 'react-native'
 import { connect } from 'react-redux'
 import styles from './styles'
@@ -34,13 +36,18 @@ class VideoList extends Component {
         // remove this when the fetch works
       })
   }
-  generateList(){
+  generateList(navigate){
     if(this.state.videos !== null){
-      return this.state.videos.map( ele => {
+      return this.props.store.myVideos.map( ele => {
         return(
-          <View key={ele.name} style={styles.ListItem}>
-            <Text style={{textAlign: "center"}}>{ele.name}</Text>
-          </View>
+          <TouchableOpacity
+            key={ele.name}
+            onPress={()=>{navigate("Video", {video: ele})}}
+          >
+            <View style={styles.ListItem}>
+              <Text style={styles.Text}>{ele.name}</Text>
+            </View>
+          </TouchableOpacity>
         )
       })
     }else{
@@ -55,7 +62,7 @@ class VideoList extends Component {
   render() {
     const { navigate, openDrawer } = this.props.navigation
     return (
-      <View style={{flex: 1}}>
+      <View style={styles.Main}>
         <Text>Video List</Text>
         <Button
           title="Open Drawer"
@@ -65,9 +72,9 @@ class VideoList extends Component {
           title="navigate"
           onPress={()=>{navigate("Video")}}
         />
-        <View style={styles.List}>
-        { this.generateList() }
-        </View>
+        <ScrollView style={styles.List}>
+        { this.generateList(navigate) }
+        </ScrollView>
       </View>
     )
   }

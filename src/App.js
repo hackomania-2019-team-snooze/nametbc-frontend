@@ -20,7 +20,6 @@ import RecordVoice from "./components/New/RecordVoice/index";
 import TextEditor from "./components/New/TextEdit/index";
 import VideoList from "./components/Gallery/VideoList/index";
 import Video from "./components/Gallery/Video/index";
-import VideoComponent from "./components/Video";
 
 const AppNavigator = createStackNavigator(
   {
@@ -54,17 +53,6 @@ const AppNavigator = createStackNavigator(
         }
       )
     }),
-    Video: createStackNavigator(
-      {
-        WatchVideo: VideoComponent
-      },
-      {
-        headerMode: "none",
-        navigationOptions: {
-          headerVisible: false
-        }
-      }
-    )
   },
   {
     headerMode: "none",
