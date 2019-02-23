@@ -8,9 +8,12 @@ import {
 } from "react-native";
 import Permissions from "react-native-permissions";
 import Orientation from "react-native-orientation";
+import { Player, Recorder, MediaStates } from "react-native-audio-toolkit";
 import Video from "react-native-video";
-import AudioRecord from "react-native-audio-record";
+import Sound from "react-native-sound";
 import Styles from "./Styles";
+
+Sound.setCategory("Playback");
 
 export default class RecordVoice extends Component {
   state = {
@@ -36,8 +39,6 @@ export default class RecordVoice extends Component {
       bitsPerSample: 16,
       wavFile: "test.wav"
     };
-
-    AudioRecord.init(options);
   }
 
   checkPermission = async () => {
@@ -65,6 +66,7 @@ export default class RecordVoice extends Component {
           this.player = ref;
         }}
         paused={this.state.isPaused}
+        onEnd={this.stopRecording}
         style={
           this.state.orientation === "PORTRAIT"
             ? Styles.portraitVideo
@@ -74,7 +76,7 @@ export default class RecordVoice extends Component {
     );
   };
 
-  renderRecordButton = () => {
+  renderRecordButton = rec => {
     if (!this.state.isRecording) {
       return (
         <TouchableOpacity
@@ -83,7 +85,7 @@ export default class RecordVoice extends Component {
             flex: 0.06,
             justifyContent: "center"
           }}
-          onPress={this.startRecording}
+          onPress={() => this.startRecording(rec)}
         >
           <Text
             style={{
@@ -107,7 +109,7 @@ export default class RecordVoice extends Component {
             flex: 0.06,
             justifyContent: "center"
           }}
-          onPress={this.stopRecording}
+          onPress={() => this.stopRecording(rec)}
         >
           <Text
             style={{
@@ -126,25 +128,93 @@ export default class RecordVoice extends Component {
     }
   };
 
-  startRecording = () => {
-    this.player.seek(0);
-    console.log("start record");
-    this.setState({ audioFile: "", isRecording: true });
-    AudioRecord.start();
+  renderPlayBackButton = () => {
+    if (!!this.state.audioFile) {
+      return (
+        <TouchableOpacity
+          style={{
+            backgroundColor: "#FFFFFF",
+            flex: 0.06,
+            justifyContent: "center"
+          }}
+          onPress={this.playBackAudio}
+        >
+          <Text
+            style={{
+              color: "#000",
+              fontWeight: "bold",
+              fontSize: 14,
+              textAlign: "center",
+              paddingLeft: 10,
+              paddingRight: 10
+            }}
+          >
+            PLAYBACK AUDIO
+          </Text>
+        </TouchableOpacity>
+      );
+    }
   };
 
-  stopRecording = async () => {
-    let audioFile = await AudioRecord.stop();
-    console.log("audioFile", audioFile);
-    this.setState({ isRecording: false, isPaused: true });
-    // wait till file is saved, else react-native-video will load incomplete file
+  playBackAudio = () => {
+    const recordedVoice = new Sound("./lol.wav", Sound.MAIN_BUNDLE, error => {
+      if (error) {
+        console.log("failed to load the sound", error);
+        return;
+      }
+    });
+
+    console.log("playing ", this.state.audioFile);
+
+    recordedVoice.play(success => {
+      if (success) {
+        console.log("successfully finished playing");
+      } else {
+        console.log("playback failed due to audio decoding errors");
+      }
+    });
+  };
+
+  startRecording = rec1 => {
+    this.player.seek(0);
+    console.log("start record", rec);
+    this.setState({ audioFile: "", isRecording: true, isPaused: false });
+    let rec = new Recorder("filename.mp4").record();
+
+    // Stop recording after approximately 3 seconds
     setTimeout(() => {
-      this.setState({ audioFile });
-    }, 1000);
+      rec.stop(err => {
+        // NOTE: In a real situation, handle possible errors here
+
+        // Play the file after recording has stopped
+        new Player("filename.mp4").play().on("ended", () => {
+          // Enable button again after playback finishes
+          console.log("ended");
+        });
+      });
+    }, 3000);
+    // rec.record();
+    // setTimeout(() => {
+    //   rec.stop(err => {
+    //     console.log("stop");
+    //     new Player("filename.mp4").play().on("ended", () => {});
+    //   });
+    // }, 3000);
+  };
+
+  stopRecording = async rec => {
+    this.setState({ isRecording: false, isPaused: true });
+    rec.stop(err => {
+      console.log("stop", err);
+      new Player("filename.mp4").play().on("ended", () => {});
+    });
+    const player = new Player("filename.mp4");
+    player.play();
   };
 
   render() {
     const { openDrawer, navigate } = this.props.navigation;
+    let rec = new Recorder("filename.mp4");
 
     if (this.state.orientation === "PORTRAIT") {
       return (
@@ -156,7 +226,8 @@ export default class RecordVoice extends Component {
         >
           <View style={{ flex: 0.8 }}>{this.renderVideo()}</View>
 
-          {this.renderRecordButton()}
+          {this.renderRecordButton(rec)}
+          {this.renderPlayBackButton()}
         </View>
       );
     } else {
