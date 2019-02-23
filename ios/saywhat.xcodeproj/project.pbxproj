@@ -42,6 +42,8 @@
 		710D2D0A9A564EA1BA44D1C0 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B639F2ED7EB4C94B0D84666 /* libRNGestureHandler.a */; };
 		A8D4309BF4F24D7D8A5DD2E2 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B913F03E3545F1ADBDFA4B /* libRCTOrientation.a */; };
 		ADA7105A9D494AB9B9D70E69 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 285FD31ADBCD48329FAF95DE /* libRCTVideo.a */; };
+		965089B34D9741A6AA5CF5E2 /* libRecording.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFEFA31D7394C528A8EE99F /* libRecording.a */; };
+		9832FC6D89BD423A834BB877 /* libReactNativeAudioToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B550E3562314A509C6752EC /* libReactNativeAudioToolkit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -355,6 +357,10 @@
 		F7B913F03E3545F1ADBDFA4B /* libRCTOrientation.a */ = {isa = PBXFileReference; name = "libRCTOrientation.a"; path = "libRCTOrientation.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		A478B791BB794BAC988DEF70 /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; name = "RCTVideo.xcodeproj"; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		285FD31ADBCD48329FAF95DE /* libRCTVideo.a */ = {isa = PBXFileReference; name = "libRCTVideo.a"; path = "libRCTVideo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		62C40A5C59D24182B6E5BCD7 /* Recording.xcodeproj */ = {isa = PBXFileReference; name = "Recording.xcodeproj"; path = "../node_modules/react-native-recording/lib/ios/Recording.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		1EFEFA31D7394C528A8EE99F /* libRecording.a */ = {isa = PBXFileReference; name = "libRecording.a"; path = "libRecording.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		0E0B3992961C492796506C4E /* ReactNativeAudioToolkit.xcodeproj */ = {isa = PBXFileReference; name = "ReactNativeAudioToolkit.xcodeproj"; path = "../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/ReactNativeAudioToolkit.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		2B550E3562314A509C6752EC /* libReactNativeAudioToolkit.a */ = {isa = PBXFileReference; name = "libReactNativeAudioToolkit.a"; path = "libReactNativeAudioToolkit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +392,8 @@
 				710D2D0A9A564EA1BA44D1C0 /* libRNGestureHandler.a in Frameworks */,
 				A8D4309BF4F24D7D8A5DD2E2 /* libRCTOrientation.a in Frameworks */,
 				ADA7105A9D494AB9B9D70E69 /* libRCTVideo.a in Frameworks */,
+				965089B34D9741A6AA5CF5E2 /* libRecording.a in Frameworks */,
+				9832FC6D89BD423A834BB877 /* libReactNativeAudioToolkit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +586,8 @@
 				65325E395A5C45F8A32F025D /* RNGestureHandler.xcodeproj */,
 				A8816EFA022C434DAE1BCA30 /* RCTOrientation.xcodeproj */,
 				A478B791BB794BAC988DEF70 /* RCTVideo.xcodeproj */,
+				62C40A5C59D24182B6E5BCD7 /* Recording.xcodeproj */,
+				0E0B3992961C492796506C4E /* ReactNativeAudioToolkit.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1207,12 +1217,16 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-recording\lib\ios",
+					"$(SRCROOT)\..\node_modules\react-native-audio-toolkit\ios\ReactNativeAudioToolkit/**",
 				);
 			};
 			name = Debug;
@@ -1236,12 +1250,16 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-recording\lib\ios",
+					"$(SRCROOT)\..\node_modules\react-native-audio-toolkit\ios\ReactNativeAudioToolkit/**",
 				);
 			};
 			name = Release;
@@ -1267,6 +1285,8 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-recording\lib\ios",
+					"$(SRCROOT)\..\node_modules\react-native-audio-toolkit\ios\ReactNativeAudioToolkit/**",
 				);
 			};
 			name = Debug;
@@ -1291,6 +1311,8 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-recording\lib\ios",
+					"$(SRCROOT)\..\node_modules\react-native-audio-toolkit\ios\ReactNativeAudioToolkit/**",
 				);
 			};
 			name = Release;
@@ -1322,12 +1344,16 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-recording\lib\ios",
+					"$(SRCROOT)\..\node_modules\react-native-audio-toolkit\ios\ReactNativeAudioToolkit/**",
 				);
 			};
 			name = Debug;
@@ -1359,12 +1385,16 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-recording\lib\ios",
+					"$(SRCROOT)\..\node_modules\react-native-audio-toolkit\ios\ReactNativeAudioToolkit/**",
 				);
 			};
 			name = Release;
@@ -1395,12 +1425,16 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-recording\lib\ios",
+					"$(SRCROOT)\..\node_modules\react-native-audio-toolkit\ios\ReactNativeAudioToolkit/**",
 				);
 			};
 			name = Debug;
@@ -1431,12 +1465,16 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-recording\lib\ios",
+					"$(SRCROOT)\..\node_modules\react-native-audio-toolkit\ios\ReactNativeAudioToolkit/**",
 				);
 			};
 			name = Release;

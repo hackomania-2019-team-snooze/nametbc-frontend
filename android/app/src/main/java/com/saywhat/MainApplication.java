@@ -3,6 +3,8 @@ package com.saywhat;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.futurice.rctaudiotoolkit.AudioPackage;
+import cn.qiuxiang.react.recording.RecordingPackage;
 import com.brentvatne.react.ReactVideoPackage;
 import com.github.yamill.orientation.OrientationPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -26,6 +28,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new AudioPackage(),
+            new RecordingPackage(),
             new ReactVideoPackage(),
             new OrientationPackage(),
             new RNGestureHandlerPackage()
