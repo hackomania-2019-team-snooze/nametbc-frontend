@@ -1,4 +1,6 @@
-const rootReducer = (state = {}, action) => {
+import seed from './seed'
+
+const rootReducer = (state = seed, action) => {
   if(action.type === "ADD_USER"){
     return{
       ...state,
