@@ -11,13 +11,15 @@ import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import { Provider } from "react-redux";
 import { configureStore } from "./store";
+import {
+  createStackNavigator, 
+  createDrawerNavigator,
+  createAppContainer 
+} from "react-navigation";
 
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
-  android:
-    "Double tap R on your keyboard to reload,\n" +
-    "Shake or press menu button for dev menu"
-});
+// import files
+import Login from './components/Login/index'
+import Home from './components/Home/index'
 
 const store = configureStore();
 
@@ -36,21 +38,13 @@ export default class App extends Component<Props> {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
+const AppNavigator = createStackNavigator({
+  Login: {
+    screen: Login
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
+  Home: {
+    screen: Home
   }
 });
+
+export default createAppContainer(AppNavigator);
