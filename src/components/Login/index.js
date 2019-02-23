@@ -4,8 +4,9 @@ import {
   View,
   Button 
 } from 'react-native'
+import { connect } from 'react-redux'
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(){
     super()
     this.state = {
@@ -14,6 +15,7 @@ export default class Login extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleSubmit(navigate){
+    console.log(this.props)
     fetch("/login", {headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
@@ -24,13 +26,16 @@ export default class Login extends Component {
       .then(res => res.json())
       .then(res =>{ 
         console.log(res);
+        this.props.redux(1, this.state.user)
         navigate("App")
       })
       .catch(res =>{ 
         console.log(res);
-        this.setState({...this.state, user: ""})
         // remove this when the fetch works
+        this.props.redux(1, this.state.user)
         navigate("App")
+        
+        this.setState({...this.state, user: ""})
       })
   }
   render() {
@@ -50,3 +55,18 @@ export default class Login extends Component {
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    store: state
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    redux: (key, data) => {
+      if(key === 1){
+        dispatch({type: "ADD_USER", data: data})
+      }
+    }
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

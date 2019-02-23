@@ -1,12 +1,11 @@
-import { createStore } from "redux";
-
 const rootReducer = (state = {}, action) => {
+  if(action.type === "ADD_USER"){
+    return{
+      ...state,
+      user: action.data
+    }
+  }
   return state;
 };
 
-const configureStore = () => {
-  const store = createStore(rootReducer);
-  return store;
-};
-
-export { configureStore };
+export default rootReducer;

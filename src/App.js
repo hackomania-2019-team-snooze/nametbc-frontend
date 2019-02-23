@@ -52,5 +52,25 @@ const AppNavigator = createStackNavigator({
         headerVisible: false,
     }
 });
+const RootStack = createAppContainer(AppNavigator);
 
-export default createAppContainer(AppNavigator);
+
+// WRAPPING ROOT STACK NAVIGATOR WITH PROVIDER (REDUX STORE) 
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import rootReducer from './store'
+import { createStore } from "redux";
+
+const store = createStore(rootReducer);
+
+class App extends Component{
+  render(){
+    return(
+      <Provider store={store}>
+        <RootStack />
+      </Provider>
+    )
+  }
+}
+
+export default App
