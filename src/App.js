@@ -51,6 +51,18 @@ const AppNavigator = createStackNavigator(
             headerVisible: false
           }
         }
+      ),
+      VideoFeed: createStackNavigator(
+        {
+          VideoList: VideoList,
+          Video: Video
+        },
+        {
+          headerMode: "none",
+          navigationOptions: {
+            headerVisible: false
+          }
+        }
       )
     }),
   },
