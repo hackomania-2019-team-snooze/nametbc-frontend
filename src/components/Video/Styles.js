@@ -2,10 +2,9 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   view: {
-    aspectRatio: 50,
     alignItems: "flex-start"
   },
-  video: {
+  portraitVideo: {
     position: "absolute",
     width: 350,
     height: 350,
@@ -14,5 +13,12 @@ export default StyleSheet.create({
     bottom: 0,
     right: 0,
     alignSelf: "flex-start"
+  },
+  landscapeVideo: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0
   }
 });

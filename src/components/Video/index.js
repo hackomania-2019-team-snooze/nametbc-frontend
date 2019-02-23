@@ -19,7 +19,7 @@ class VideoComponent extends Component {
         onBuffer={this.onBuffer}
         onError={this.videoError}
         controls={true}
-        style={Styles.video}
+        style={Styles.portraitVideo}
       />
     );
   };

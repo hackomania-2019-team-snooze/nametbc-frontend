@@ -22,24 +22,56 @@ import VideoList from "./components/Gallery/VideoList/index";
 import Video from "./components/Gallery/Video/index";
 import VideoComponent from "./components/Video";
 
-const AppNavigator = createStackNavigator({
-  Login: {
-    screen: Login
-  },
-  App: createDrawerNavigator({
-    New: createStackNavigator({
-      DailyVids: DailyVids,
-      RecordVoice: RecordVoice,
-      TextEditor: TextEditor
+const AppNavigator = createStackNavigator(
+  {
+    Login: {
+      screen: Login
+    },
+    App: createDrawerNavigator({
+      New: createStackNavigator(
+        {
+          DailyVids: DailyVids,
+          RecordVoice: RecordVoice,
+          TextEditor: TextEditor
+        },
+        {
+          headerMode: "none",
+          navigationOptions: {
+            headerVisible: false
+          }
+        }
+      ),
+      Gallery: createStackNavigator(
+        {
+          VideoList: VideoList,
+          Video: Video
+        },
+        {
+          headerMode: "none",
+          navigationOptions: {
+            headerVisible: false
+          }
+        }
+      )
     }),
-    Gallery: createStackNavigator({
-      VideoList: VideoList,
-      Video: Video
-    })
-  }),
-  Video: createStackNavigator({
-    WatchVideo: VideoComponent
-  })
-});
+    Video: createStackNavigator(
+      {
+        WatchVideo: VideoComponent
+      },
+      {
+        headerMode: "none",
+        navigationOptions: {
+          headerVisible: false
+        }
+      }
+    )
+  },
+  {
+    headerMode: "none",
+    navigationOptions: {
+      headerVisible: false
+    }
+  }
+);
 
 export default createAppContainer(AppNavigator);
