@@ -7,8 +7,6 @@
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
 
-import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
 import {
   createStackNavigator,
   createDrawerNavigator,
@@ -17,15 +15,27 @@ import {
 
 // import files
 import Login from "./components/Login/index";
-import Home from "./components/Home/index";
+import DailyVids from "./components/New/DailyVids/index";
+import RecordVoice from './components/New/RecordVoice/index'
+import TextEditor from './components/New/TextEdit/index'
+import VideoList from './components/Gallery/VideoList/index'
+import Video from './components/Gallery/Video/index'
 
 const AppNavigator = createStackNavigator({
   Login: {
     screen: Login
   },
-  Home: {
-    screen: Home
-  }
+  App: createDrawerNavigator({
+    New: createStackNavigator({
+      DailyVids: DailyVids,
+      RecordVoice: RecordVoice,
+      TextEditor: TextEditor
+    }),
+    Gallery: createStackNavigator({
+      VideoList: VideoList,
+      Video: Video
+    })
+  })
 });
 
 export default createAppContainer(AppNavigator);
