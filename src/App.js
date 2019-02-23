@@ -15,15 +15,17 @@ import {
 
 // import files
 import Login from './components/Login/index'
-import Home from './components/Home/index'
+import Home from './components/New/DailyVids/index'
 
 
 const AppNavigator = createStackNavigator({
   Login: {
     screen: Login
   },
-  Home: {
-    screen: Home
+  App: {
+    screen: createDrawerNavigator({
+      Home: Home
+    })
   }
 });
 
