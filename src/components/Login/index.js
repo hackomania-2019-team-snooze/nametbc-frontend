@@ -45,15 +45,9 @@ class Login extends Component {
           value={this.state.user}
         />
         <Button
-          title="HOME"
+          title="Log In"
           onPress={() => {
             this.handleSubmit(navigate);
-          }}
-        />
-        <Button
-          title="Video"
-          onPress={() => {
-            navigate("WatchVideo");
           }}
         />
         <Button
