@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { TextInput, View, Button } from "react-native";
 import { connect } from "react-redux";
+import { Input } from "react-native-elements";
 
 class Login extends Component {
   constructor() {
@@ -39,7 +40,7 @@ class Login extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View>
-        <TextInput
+        <Input
           placeholder="username"
           onChangeText={text => this.setState({ ...this.state, user: text })}
           value={this.state.user}

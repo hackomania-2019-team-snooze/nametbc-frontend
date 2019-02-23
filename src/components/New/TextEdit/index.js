@@ -8,18 +8,23 @@ export default class index extends Component {
     super(props);
     this.state = { text: "lorem huehue" };
   }
-
+  componentDidMount() {
+    this.setState({ text: this.props.navigation.getParam("transcribe") });
+  }
   render() {
     const { navigate } = this.props.navigation;
     const { navigation } = this.props;
-    const transcribe = navigation.getParam("transcribe", "some default value");
+    const transcribe2 = navigation.getParam("transcribe", "some default value");
+    // var transcribe2 = new String(
+    //   "" + navigation.getParam("transcribe", "some default value") + ""
+    // ).toString;
     return (
       <View>
         <TextInput
-          {...transcribe} // inherit any props passed to it
+          {...transcribe2} // inherit any props passed to it
           editable={true}
           onChangeText={text => this.setState({ text })}
-          value={transcribe}
+          value={this.state.text}
         />
         <Button
           title="Cancel"
