@@ -56,6 +56,12 @@ class Login extends Component {
             navigate("WatchVideo");
           }}
         />
+        <Button
+          title="Record Voice"
+          onPress={() => {
+            navigate("RecordVoice");
+          }}
+        />
       </View>
     );
   }
