@@ -1,5 +1,11 @@
 {
   "name:": "SayWhat",
   "devDependencies": {},
-  "dependencies": {}
+  "scripts": {
+    "android": "react-native run-android"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react-native": "0.57.4"
+  }
 }
