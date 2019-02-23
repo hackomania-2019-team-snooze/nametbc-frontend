@@ -1,72 +1,80 @@
-import React, { Component } from 'react'
-import { 
-  TextInput,
-  View,
-  Button 
-} from 'react-native'
-import { connect } from 'react-redux'
+import React, { Component } from "react";
+import { TextInput, View, Button } from "react-native";
+import { connect } from "react-redux";
 
 class Login extends Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
       user: ""
-    }
-    this.handleSubmit = this.handleSubmit.bind(this)
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleSubmit(navigate){
-    console.log(this.props)
-    fetch("/login", {headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        method: "POST",
-        body: JSON.stringify({user: this.state.user})
-      })
+  handleSubmit(navigate) {
+    console.log(this.props);
+    fetch("/login", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      method: "POST",
+      body: JSON.stringify({ user: this.state.user })
+    })
       .then(res => res.json())
-      .then(res =>{ 
+      .then(res => {
         console.log(res);
-        this.props.redux(1, this.state.user)
-        navigate("App")
+        this.props.redux(1, this.state.user);
+        navigate("App");
       })
-      .catch(res =>{ 
+      .catch(res => {
         console.log(res);
         // remove this when the fetch works
-        this.props.redux(1, this.state.user)
-        navigate("App")
-        
-        this.setState({...this.state, user: ""})
-      })
+        this.props.redux(1, this.state.user);
+        navigate("App");
+
+        this.setState({ ...this.state, user: "" });
+      });
   }
   render() {
-    const { navigate } = this.props.navigation
+    const { navigate } = this.props.navigation;
     return (
       <View>
-        <TextInput 
+        <TextInput
           placeholder="username"
-          onChangeText={(text) => this.setState({...this.state, user: text})}
+          onChangeText={text => this.setState({ ...this.state, user: text })}
           value={this.state.user}
         />
         <Button
           title="HOME"
-          onPress={()=>{this.handleSubmit(navigate)}}
+          onPress={() => {
+            this.handleSubmit(navigate);
+          }}
+        />
+        <Button
+          title="Video"
+          onPress={() => {
+            navigate("WatchVideo");
+          }}
         />
       </View>
-    )
+    );
   }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     store: state
-  }
-}
-const mapDispatchToProps = (dispatch) => {
+  };
+};
+const mapDispatchToProps = dispatch => {
   return {
     redux: (key, data) => {
-      if(key === 1){
-        dispatch({type: "ADD_USER", data: data})
+      if (key === 1) {
+        dispatch({ type: "ADD_USER", data: data });
       }
     }
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);
