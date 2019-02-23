@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, Button, TouchableOpacity } from "react-native";
+import { Text, View, Button, SectionList } from "react-native";
 import Video from "react-native-video";
 import Styles from "./Styles";
 
@@ -30,19 +30,25 @@ class VideoComponent extends Component {
     return (
       <View
         style={{
-          flexDirection: "column"
+          flexDirection: "column",
+          flex: 1
         }}
       >
-        <View style={{ flex: 1 }}>{this.renderVideo()}</View>
+        <View style={{ flex: 0.5 }}>{this.renderVideo()}</View>
         <View
           style={{
+            flex: 0.06,
             flexDirection: "row",
-            flex: 100
+            alignContent: "stretch"
           }}
-        />
-        <TouchableOpacity>
-          <Text>Like</Text>
-        </TouchableOpacity>
+        >
+          <View style={{ flex: 0.5 }}>
+            <Button title={"Like"} />
+          </View>
+          <View style={{ flex: 0.5 }}>
+            <Button title={"Dislike"} />
+          </View>
+        </View>
       </View>
     );
   }

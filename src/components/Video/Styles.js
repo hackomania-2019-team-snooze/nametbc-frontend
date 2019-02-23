@@ -5,13 +5,10 @@ export default StyleSheet.create({
     alignItems: "flex-start"
   },
   portraitVideo: {
-    width: 350,
-    height: 350,
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    alignSelf: "flex-start"
+    // width: 350,
+    // height: 350,
+    flex: 1,
+    alignSelf: "stretch"
   },
   landscapeVideo: {
     position: "absolute",
