@@ -58,7 +58,9 @@ class Login extends Component {
         />
         <Button
           title="VideoList"
-          onPress={()=>{navigate("VideoList")}}
+          onPress={() => {
+            navigate("VideoList");
+          }}
         />
       </View>
     );
