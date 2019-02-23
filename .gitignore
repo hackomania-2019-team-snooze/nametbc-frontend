@@ -1,3 +1,5 @@
 node_modules/
 
 android/local.properties
+android/settings.gradle
+android/app/build
