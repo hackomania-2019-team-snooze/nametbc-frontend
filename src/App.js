@@ -16,10 +16,11 @@ import {
 // import files
 import Login from "./components/Login/index";
 import DailyVids from "./components/New/DailyVids/index";
-import RecordVoice from './components/New/RecordVoice/index'
-import TextEditor from './components/New/TextEdit/index'
-import VideoList from './components/Gallery/VideoList/index'
-import Video from './components/Gallery/Video/index'
+import RecordVoice from "./components/New/RecordVoice/index";
+import TextEditor from "./components/New/TextEdit/index";
+import VideoList from "./components/Gallery/VideoList/index";
+import Video from "./components/Gallery/Video/index";
+import VideoComponent from "./components/Video";
 
 const AppNavigator = createStackNavigator({
   Login: {
@@ -35,6 +36,9 @@ const AppNavigator = createStackNavigator({
       VideoList: VideoList,
       Video: Video
     })
+  }),
+  Video: createStackNavigator({
+    WatchVideo: VideoComponent
   })
 });
 
