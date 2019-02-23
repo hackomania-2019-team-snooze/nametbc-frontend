@@ -44,7 +44,8 @@ class DailyVids extends Component {
             title={l.name}
             subtitle={l.subtitle}
             onPress={() => {
-              this.refs.toast.show(l.name);
+              navigate("RecordVoice");
+              // this.refs.toast.show(l.name);
             }}
           />
         ))}
