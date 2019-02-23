@@ -1,4 +1,12 @@
 node_modules/
 
-android/local.properties
-android/app/build/
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+.settings/
+upload-keystore.jks
+google-play.json
