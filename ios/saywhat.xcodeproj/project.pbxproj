@@ -40,9 +40,14 @@
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		710D2D0A9A564EA1BA44D1C0 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B639F2ED7EB4C94B0D84666 /* libRNGestureHandler.a */; };
+<<<<<<< HEAD
 		CA13320695DD4909BBA4D2A7 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50417F28D5C34882B9F9F0A1 /* libRCTVideo.a */; };
 		28D0F5EB59F74696B3BD9B0F /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8242CC9866D84B769261DF81 /* libRCTOrientation.a */; };
 		7DD5C35CC5DB4849940BAB43 /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EA2431DA2C444B8AB2E587 /* libReactNativePermissions.a */; };
+=======
+		A8D4309BF4F24D7D8A5DD2E2 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B913F03E3545F1ADBDFA4B /* libRCTOrientation.a */; };
+		ADA7105A9D494AB9B9D70E69 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 285FD31ADBCD48329FAF95DE /* libRCTVideo.a */; };
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -352,12 +357,19 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		65325E395A5C45F8A32F025D /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		1B639F2ED7EB4C94B0D84666 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+<<<<<<< HEAD
 		5E1830A7BDA64E9CA0D50560 /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; name = "RCTVideo.xcodeproj"; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		50417F28D5C34882B9F9F0A1 /* libRCTVideo.a */ = {isa = PBXFileReference; name = "libRCTVideo.a"; path = "libRCTVideo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		E17BDD897CA64B27ABBE37EE /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; name = "RCTOrientation.xcodeproj"; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		8242CC9866D84B769261DF81 /* libRCTOrientation.a */ = {isa = PBXFileReference; name = "libRCTOrientation.a"; path = "libRCTOrientation.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		444F43417CF1490EAF9D9DEB /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; name = "ReactNativePermissions.xcodeproj"; path = "../node_modules/react-native-permissions/ios/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		37EA2431DA2C444B8AB2E587 /* libReactNativePermissions.a */ = {isa = PBXFileReference; name = "libReactNativePermissions.a"; path = "libReactNativePermissions.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+=======
+		A8816EFA022C434DAE1BCA30 /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; name = "RCTOrientation.xcodeproj"; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		F7B913F03E3545F1ADBDFA4B /* libRCTOrientation.a */ = {isa = PBXFileReference; name = "libRCTOrientation.a"; path = "libRCTOrientation.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		A478B791BB794BAC988DEF70 /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; name = "RCTVideo.xcodeproj"; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		285FD31ADBCD48329FAF95DE /* libRCTVideo.a */ = {isa = PBXFileReference; name = "libRCTVideo.a"; path = "libRCTVideo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,9 +399,14 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				710D2D0A9A564EA1BA44D1C0 /* libRNGestureHandler.a in Frameworks */,
+<<<<<<< HEAD
 				CA13320695DD4909BBA4D2A7 /* libRCTVideo.a in Frameworks */,
 				28D0F5EB59F74696B3BD9B0F /* libRCTOrientation.a in Frameworks */,
 				7DD5C35CC5DB4849940BAB43 /* libReactNativePermissions.a in Frameworks */,
+=======
+				A8D4309BF4F24D7D8A5DD2E2 /* libRCTOrientation.a in Frameworks */,
+				ADA7105A9D494AB9B9D70E69 /* libRCTVideo.a in Frameworks */,
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,9 +597,14 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				65325E395A5C45F8A32F025D /* RNGestureHandler.xcodeproj */,
+<<<<<<< HEAD
 				5E1830A7BDA64E9CA0D50560 /* RCTVideo.xcodeproj */,
 				E17BDD897CA64B27ABBE37EE /* RCTOrientation.xcodeproj */,
 				444F43417CF1490EAF9D9DEB /* ReactNativePermissions.xcodeproj */,
+=======
+				A8816EFA022C434DAE1BCA30 /* RCTOrientation.xcodeproj */,
+				A478B791BB794BAC988DEF70 /* RCTVideo.xcodeproj */,
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1210,13 +1232,21 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/saywhat.app/saywhat";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+=======
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+=======
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 			};
 			name = Debug;
@@ -1238,13 +1268,21 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/saywhat.app/saywhat";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+=======
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+=======
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 			};
 			name = Release;
@@ -1268,9 +1306,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+=======
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 			};
 			name = Debug;
@@ -1293,9 +1334,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+=======
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 			};
 			name = Release;
@@ -1325,13 +1369,21 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+=======
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+=======
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 			};
 			name = Debug;
@@ -1361,13 +1413,21 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+=======
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+=======
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 			};
 			name = Release;
@@ -1396,13 +1456,21 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+=======
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+=======
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 			};
 			name = Debug;
@@ -1431,13 +1499,21 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+=======
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+=======
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
 				);
 			};
 			name = Release;

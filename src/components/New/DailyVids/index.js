@@ -25,6 +25,33 @@ class DailyVids extends Component {
   componentDidMount() {
     console.log(this.props.store);
   }
+  // needs to update once backend is up
+  handleSubmit(navigate) {
+    console.log(this.props);
+    fetch("/dailyVideos/id", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      method: "POST",
+      body: JSON.stringify({ user: this.state.user })
+    })
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        this.props.redux(1, this.state.user);
+        navigate("App");
+      })
+      .catch(res => {
+        console.log(res);
+        // remove this when the fetch works
+        this.props.redux(1, this.state.user);
+        navigate("App");
+
+        this.setState({ ...this.state, user: "" });
+        // i need to save video title and url to pass to RecordVoice
+      });
+  }
   render() {
     const { openDrawer, navigate } = this.props.navigation;
     return (

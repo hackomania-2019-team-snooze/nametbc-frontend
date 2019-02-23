@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
 import {
   Text,
   View,
@@ -77,6 +78,27 @@ export default class RecordVoice extends Component {
             : Styles.landscapeVideo
         }
       />
+=======
+import { Text, View } from "react-native";
+import { Button } from "react-native-elements";
+
+export default class index extends Component {
+  render() {
+    const { navigate } = this.props.navigation;
+    return (
+      <View>
+        <Text> RecordVoice </Text>
+        <Button
+          title="stop recording"
+          onPress={() => {
+            // navigate("TextEditor");
+            this.props.navigation.navigate("TextEditor", {
+              transcribe: "transcribe from RecordVideo to TextEdit"
+            });
+          }}
+        />
+      </View>
+>>>>>>> 35a25c85d64c519414e30d1111640eb7f0ae0757
     );
   };
 
