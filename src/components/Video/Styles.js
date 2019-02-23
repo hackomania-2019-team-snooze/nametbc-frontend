@@ -5,7 +5,6 @@ export default StyleSheet.create({
     alignItems: "flex-start"
   },
   portraitVideo: {
-    position: "absolute",
     width: 350,
     height: 350,
     top: 0,

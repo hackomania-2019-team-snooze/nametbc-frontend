@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+import { Text, View, Button, TouchableOpacity } from "react-native";
 import Video from "react-native-video";
 import Styles from "./Styles";
 
@@ -27,7 +27,24 @@ class VideoComponent extends Component {
   render() {
     const { openDrawer, navigate } = this.props.navigation;
 
-    return <View style={Styles.view}>{this.renderVideo()}</View>;
+    return (
+      <View
+        style={{
+          flexDirection: "column"
+        }}
+      >
+        <View style={{ flex: 1 }}>{this.renderVideo()}</View>
+        <View
+          style={{
+            flexDirection: "row",
+            flex: 100
+          }}
+        />
+        <TouchableOpacity>
+          <Text>Like</Text>
+        </TouchableOpacity>
+      </View>
+    );
   }
 }
 
